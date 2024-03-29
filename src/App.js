@@ -2,24 +2,24 @@ export default function Board() {
     return (
       <>
         <div className="board-row">
-          <Square />
-          <Square />
-          <Square />
+          <Square letter="a"/>
+          <Square letter="b"/>
+          <Square letter="c"/>
         </div>
         <div className="board-row">
-          <Square />
-          <Square />
-          <Square />       
+          <Square letter="d"/>
+          <Square letter="e"/>
+          <Square letter="f"/>    
         </div>
         <div className="board-row">
-          <Square />
-          <Square />
-          <Square />
+          <Square letter="g"/>
+          <Square letter="h"/>
+          <Square letter="i"/>
         </div>
       </>
     );
   }
 
-function Square() {
-  return <button className="square">1</button>;
+function Square({letter}) {
+  return <button className="square">{letter}</button>;
 }
