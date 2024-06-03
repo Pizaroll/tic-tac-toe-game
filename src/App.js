@@ -21,5 +21,16 @@ export default function Board() {
   }
 
 function Square({letter}) {
-  return <button className="square">{letter}</button>;
+  function handleClick() {
+    console.log('clicked ' + letter + '!');
+  }
+  
+  return ( // Returning the HTML
+    <button // This is a button
+      className="square" // HTML Class
+      onClick={handleClick} // HTML OnClick Functionality
+    >
+      {letter} 
+    </button> // End button
+  );
 }
