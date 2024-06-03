@@ -23,10 +23,11 @@ export default function Board() {
     );
   }
 
-function Square({letter}) {
+function Square({letter, onSquareClick}) {
   return ( // Returning the HTML
     <button // This is a button
       className="square" // HTML Class
+      onClick={onSquareClick}
     >
       {letter} 
     </button> // End button
