@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 export default function Board() {
     return (
       <>
@@ -20,7 +22,9 @@ export default function Board() {
     );
   }
 
-function Square({letter}) {
+function Square() {
+  const [letter, setLetter] = useState(null);
+
   function handleClick() {
     console.log('clicked ' + letter + '!');
   }
