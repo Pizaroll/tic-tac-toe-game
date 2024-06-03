@@ -4,19 +4,19 @@ export default function Board() {
     return (
       <>
         <div className="board-row">
-          <Square letter="a"/>
-          <Square letter="b"/>
-          <Square letter="c"/>
+          <Square />
+          <Square />
+          <Square />
         </div>
         <div className="board-row">
-          <Square letter="d"/>
-          <Square letter="e"/>
-          <Square letter="f"/>    
+          <Square />
+          <Square />
+          <Square />    
         </div>
         <div className="board-row">
-          <Square letter="g"/>
-          <Square letter="h"/>
-          <Square letter="i"/>
+          <Square />
+          <Square />
+          <Square />
         </div>
       </>
     );
@@ -26,7 +26,7 @@ function Square() {
   const [letter, setLetter] = useState(null);
 
   function handleClick() {
-    console.log('clicked ' + letter + '!');
+    setLetter('X');
   }
   
   return ( // Returning the HTML
